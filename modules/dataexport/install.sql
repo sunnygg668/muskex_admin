@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS `__PREFIX__dataexport` (
+     `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
+     `admin_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '导出人',
+     `name` varchar(100) NOT NULL DEFAULT '' COMMENT '任务名称',
+     `main_table` varchar(100) NOT NULL DEFAULT '' COMMENT '数据源表',
+     `field_config` text COMMENT '字段配置',
+     `join_table` text COMMENT '关联表配置',
+     `where_field` text COMMENT '筛选规则',
+     `order_field` text COMMENT '排序规则',
+     `xls_max_number` int(7) unsigned NOT NULL DEFAULT '10000' COMMENT '单个xls最大记录数',
+     `concurrent_create_xls` tinyint(3) unsigned NOT NULL DEFAULT '3' COMMENT '并发创建xls',
+     `memory_limit` smallint(5) unsigned NOT NULL DEFAULT '128' COMMENT '脚本内存限制(MB)',
+     `export_number` int(10) unsigned DEFAULT NULL COMMENT '导出记录数',
+     `subtask` text COMMENT '子任务资料',
+     `lastprogress` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '上次导出进度',
+     `lastfile` varchar(255) NOT NULL DEFAULT '' COMMENT '上次导出文件',
+     `lastexporttime` int(10) unsigned DEFAULT NULL COMMENT '上次导出时间',
+     `createtime` int(10) unsigned DEFAULT NULL COMMENT '创建时间',
+     PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COMMENT='导出任务表';

@@ -1,0 +1,9 @@
+{
+    "require": {
+        "aliyuncs/oss-sdk-php": "^2.6"
+    },
+    "dependencies": {
+        "jssha": "^3.3.0"
+    },
+    "protectedFiles": ["web/src/components/mixins/baUpload.ts"]
+}

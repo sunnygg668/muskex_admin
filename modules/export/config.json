@@ -1,0 +1,8 @@
+{
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.19.0"
+    },
+    "dependencies": {
+        "js-file-download": "^0.4.12"
+    }
+}
